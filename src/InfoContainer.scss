@@ -1,0 +1,14 @@
+.info-container {
+  height: 100vh;
+}
+
+.info-container-bg {
+  height: 100vh;
+  background: url('./images/SW-logo.png') no-repeat center fixed;
+}
+
+.display-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
