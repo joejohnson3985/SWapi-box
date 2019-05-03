@@ -3,7 +3,7 @@ import CrawlContainer from './CrawlContainer.js'
 import Menu from './Menu.js'
 import CardContainer from './CardContainer.js'
 import './InfoContainer.scss';
-import { getCurrentCategoryData, getHomeworld, getSpecies } from './ApiCalls/ApiFetches.js'
+import { getCurrentCategoryData, getHomeworld, getSpecies, getPlanets } from './ApiCalls/ApiFetches.js'
 
 class InfoContainer extends Component {
   constructor() {
@@ -48,7 +48,9 @@ class InfoContainer extends Component {
 
   fetchPlanets = (planet) => {
     getCurrentCategoryData(planet)
-    .then(plnt => this.setState({categoryData: plnt.results, containerClass: 'info-container-bg'}))
+    .then(result => getPlanets(result.results))
+    // .then(planets => console.log(planets))
+    .then(plnt => this.setState({categoryData: plnt, containerClass: 'info-container-bg'}))
   }
 
   fetchVehicles = (vehicle) => {
