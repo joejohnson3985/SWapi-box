@@ -1,9 +1,10 @@
 @mixin nav-btn {
   color: white;
-  background: rgb(152, 135, 143);
+  background: rgba(29, 31, 42, .4);
   display: flex;
   align-items: center;
   flex-direction: column;
   border-radius: 3px;
-  width: 30%
+  width: 30%;
+  padding: 5px;
 }
