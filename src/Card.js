@@ -1,10 +1,11 @@
 import React from 'react'
+import './Card.scss'
 
 const Card = ({name, species, homeworld, population, terrain, climate, residents, model, vehicle_class, passengers}) => {
   let whatToRender;
   if(species) {
     whatToRender = 
-      <div>
+      <div className='people-card'>
         <p>name: {name}</p>
         <p>homeworld: {homeworld}</p>
         <p>species: {species}</p>
@@ -12,7 +13,7 @@ const Card = ({name, species, homeworld, population, terrain, climate, residents
       </div>
   } else if(model) {
     whatToRender = 
-      <div>
+      <div className='vehicle-card'>
         <p>name: {name}</p>
         <p>model: {model}</p>
         <p>Vehicle Class: {vehicle_class}</p>
@@ -20,18 +21,18 @@ const Card = ({name, species, homeworld, population, terrain, climate, residents
       </div>
   } else if(climate) {
     whatToRender = 
-    <div>
+    <div className='planets-card'>
       <p>name: {name}</p>
       <p>terrain: {terrain}</p>
       <p>population: {population}</p>
-      <p>residents: {residents}</p>
+      <p>residents: {residents.join(', ')}</p>
       <p>climate: {climate}</p>
     </div>
   }
   return(
-    <div>
+    <div className='card'>
       {whatToRender}
-      <button>Favorite</button>
+      <button className='favorite-btn'>Favorite</button>
     </div>
   )
 }
