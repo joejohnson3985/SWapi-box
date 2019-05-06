@@ -20,7 +20,7 @@ class Menu extends Component {
   render() {
     return(
       <div className='menu'>
-        <img src={logo} />
+        <img src={logo} alt='Star Wars Logo'/>
         <nav>
           <div className='btn' role='button' name='people' onClick={this.handleClick}>
             <img src={PeopleIcon} alt='Storm trooper illustration' name='people'/>
