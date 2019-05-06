@@ -15,7 +15,7 @@ const CrawlContainer = ({title, episode_id, opening_crawl, release_date}) => {
                   />
     
   } else {
-    whatToRender = <p className='long-time-ago'> A long time ago in a galaxy far, far away....</p>
+    whatToRender = <p className='long-time-ago'> A long time ago in a galaxy <br/> far, far away....</p>
   }
   return(
     <div className='crawl-container'>
